@@ -1,0 +1,33 @@
+import os
+from fun import *
+os.system("cls")
+peliculas = [
+   
+{'codigo':'P101','nombre': 'Luz de Otoño','genero': 'drama',          'duracion': 110,'clasificacion': 'B','idioma': 'Español','3d': False,'precio': 5990,'cupos': 40},
+{'codigo':'P102','nombre': 'Noche Neón',  'genero': 'accion',         'duracion': 125,'clasificacion': 'C','idioma': 'Ingles', '3d': True, 'precio': 7990,'cupos': 0},
+{'codigo':'P103','nombre': 'Planeta Agua','genero': 'documental',     'duracion': 90, 'clasificacion':'A' ,'idioma': 'Español','3d':False, 'precio': 4990,'cupos': 25},
+{'codigo':'P104','nombre': 'Risa Total',  'genero': 'comedia',        'duracion': 105,'clasificacion': 'A','idioma': 'Español','3d': True, 'precio': 6990,'cupos': 12},
+{'codigo':'P105','nombre': 'Código Zero', 'genero': 'thriller',       'duracion': 118,'clasificacion': 'C','idioma': 'Ingles', '3d': True, 'precio': 8990,'cupos': 8},
+{'codigo':'P106','nombre': 'Viaje Lunar', 'genero': 'ciencia ficción','duracion': 132,'clasificacion': 'B','idioma': 'Ingles', '3d': False,'precio': 7490,'cupos': 3}]
+
+
+
+while True:
+ opc=leer_opcion()
+ match opc:
+    case 1:
+       cupos_genero(peliculas)
+       limpiar_pantalla()
+    case 2:
+       busqueda_precio(peliculas)
+       limpiar_pantalla()
+    case 3:
+       buscar_codigo(peliculas)
+    case 4:
+        peliculas.append(agregar_pelicula(peliculas))
+    case 5:
+       eliminar_pelicula(peliculas)
+      
+    case 6:
+       print("programa finalizado.")
+       break
